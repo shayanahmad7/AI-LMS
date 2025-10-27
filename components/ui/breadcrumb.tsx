@@ -1,0 +1,32 @@
+import { ChevronRight } from "lucide-react"
+import Link from "next/link"
+import { cn } from "@/lib/utils"
+
+interface BreadcrumbItem {
+  label: string
+  href?: string
+}
+
+interface BreadcrumbProps {
+  items: BreadcrumbItem[]
+  className?: string
+}
+
+export function Breadcrumb({ items, className }: BreadcrumbProps) {
+  return (
+    <nav className={cn("flex items-center space-x-2 text-sm text-muted-foreground", className)}>
+      {items.map((item, index) => (
+        <div key={index} className="flex items-center">
+          {index > 0 && <ChevronRight className="w-4 h-4 mx-2" />}
+          {item.href ? (
+            <Link href={item.href} className="hover:text-foreground transition-colors">
+              {item.label}
+            </Link>
+          ) : (
+            <span className="text-foreground font-medium">{item.label}</span>
+          )}
+        </div>
+      ))}
+    </nav>
+  )
+}
