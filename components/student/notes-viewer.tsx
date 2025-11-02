@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Card } from "@/components/ui/card"
