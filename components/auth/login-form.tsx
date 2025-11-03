@@ -7,7 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { GraduationCap, Mail, Lock, AlertCircle } from "lucide-react"
+import { GraduationCap, Mail, Lock, AlertCircle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/lib/auth/auth-context"
@@ -79,6 +79,10 @@ export function LoginForm() {
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="text-center">
+        <Link href="/" className="inline-flex items-center text-sm text-muted-foreground hover:text-foreground mb-4 hover:underline">
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Back to home
+        </Link>
         <div className="mx-auto w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
           <GraduationCap className="w-6 h-6 text-white" />
         </div>

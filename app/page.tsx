@@ -50,9 +50,9 @@ export default function HomePage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Link href="/teacher">
+                <Link href="/login">
                   <Button className="w-full" size="lg">
-                    Go to Teacher Dashboard
+                    Get Started as Teacher
                   </Button>
                 </Link>
               </CardContent>
@@ -67,9 +67,9 @@ export default function HomePage() {
                 <CardDescription>Access your courses, interact with AI tutors, and track your progress</CardDescription>
               </CardHeader>
               <CardContent>
-                <Link href="/student">
+                <Link href="/login">
                   <Button className="w-full bg-transparent" size="lg" variant="outline">
-                    Go to Student Portal
+                    Get Started as Student
                   </Button>
                 </Link>
               </CardContent>
